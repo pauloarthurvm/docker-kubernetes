@@ -12,7 +12,8 @@ EXPOSE 80
 
 # VOLUME ["/app/node_modules"]
 
-CMD ["node", "server.js"]
+# CMD ["node", "server.js"]
+CMD ["npm", "start"]
 
 # docker build -t feedback-node .
 
