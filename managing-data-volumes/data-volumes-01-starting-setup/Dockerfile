@@ -13,4 +13,4 @@ EXPOSE 80
 CMD ["node", "server.js"]
 
 # docker build -t feedback-node .
-# docker run -p 3000:80 -d --name feedback-app --rm feedback-node
+# docker run -p 3000:80 -d --name feedback-app --rm -v feedback:/app/feedback feedback-node
