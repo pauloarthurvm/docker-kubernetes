@@ -22,3 +22,6 @@ CMD ["npm", "start"]
 
 # For Bind Mounts
 # docker run -p 3000:80 -d --name feedback-app --rm -v feedback:/app/feedback -v "C:\Users\Dell\Documents\Docker\Docker&Kubernetes\managing-data-volumes\data-volumes-01-starting-setup:/app:ro" -v /app/temp -v /app/node_modules feedback-node:volumes
+
+# dockerignore
+# Whenever you do not want to add some folder/file to your COPY instruction to build the image
