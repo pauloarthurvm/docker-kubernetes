@@ -8,7 +8,9 @@ RUN npm install
 
 COPY . /app
 
-EXPOSE 80
+ENV PORT 80
+
+EXPOSE $PORT
 
 # VOLUME ["/app/node_modules"]
 
@@ -25,3 +27,7 @@ CMD ["npm", "start"]
 
 # dockerignore
 # Whenever you do not want to add some folder/file to your COPY instruction to build the image
+
+# Env Var
+# You can set the PORT in dockerfile OR run command with --env OR in a .env file (need to add [--env-file ./.env] in run command)
+# Handling secured data, the best option is to create the .env file, add it to dockerignore, so when you send the image to someone, they do not have acces to this kind of data
