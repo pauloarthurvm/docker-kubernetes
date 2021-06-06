@@ -1,5 +1,7 @@
 FROM node:14
 
+ARG DEFAULT_PORT=80
+
 WORKDIR /app
 
 COPY package.json /app
@@ -8,7 +10,7 @@ RUN npm install
 
 COPY . /app
 
-ENV PORT 80
+ENV PORT $DEFAULT_PORT
 
 EXPOSE $PORT
 
@@ -18,6 +20,7 @@ EXPOSE $PORT
 CMD ["npm", "start"]
 
 # docker build -t feedback-node .
+# Optional: docker build -t feedback-node --build-arg DEFAULT_PORT=8000 .
 
 # For volumes
 # docker run -p 3000:80 -d --name feedback-app --rm -v feedback:/app/feedback feedback-node
