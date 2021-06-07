@@ -1,0 +1,11 @@
+Create network
+
+Run mongodb
+
+docker run --name mongodb -d --rm -p 27017:27017 mongo
+
+Build backend image
+
+docker build -t goals-node .
+
+docker run --name goals-backend --rm -d -p 80:80 goals-node
