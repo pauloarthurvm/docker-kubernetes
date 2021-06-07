@@ -16,4 +16,4 @@ Build/run frontend image
 
 docker build -t goals-react .
 
-docker run --name goals-frontend --rm -d -p 3000:3000 -it goals-react
+docker run --name goals-frontend -v "C:\Users\Dell\Documents\Docker\Docker&Kubernetes\multicontainer-01-starting-setup\frontend\src:/app/src" --rm -d -p 3000:3000 -it goals-react
