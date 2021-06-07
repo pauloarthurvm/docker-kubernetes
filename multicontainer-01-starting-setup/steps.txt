@@ -10,7 +10,7 @@ Build/run backend image
 
 docker build -t goals-node .
 
-docker run --name goals-backend --rm -d --network goals-net -p 80:80 goals-node
+docker run --name goals-backend -v "C:\Users\Dell\Documents\Docker\Docker&Kubernetes\multicontainer-01-starting-setup\backend:/app" -v logs:/app/logs -v /app/node_modules -e MONGODB_USERNAME=user --rm -d --network goals-net -p 80:80 goals-node
 
 Build/run frontend image
 
