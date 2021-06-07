@@ -1,14 +1,16 @@
 Create network
 
+docker network create goals-net
+
 Run mongodb
 
-docker run --name mongodb -d --rm -p 27017:27017 mongo
+docker run --name mongodb -d --rm --network goals-net mongo
 
 Build/run backend image
 
 docker build -t goals-node .
 
-docker run --name goals-backend --rm -d -p 80:80 goals-node
+docker run --name goals-backend --rm -d --network goals-net -p 80:80 goals-node
 
 Build/run frontend image
 
