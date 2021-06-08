@@ -8,6 +8,6 @@ docker run -it node npm init
 
 =============================
 
-docker build -t node-util .
+docker build -t mynpm .
 
-docker run -it -v "C:\Users\Dell\Documents\Docker\Docker&Kubernetes\utility-containers:/app" node-util npm init
+docker run -it -v "C:\Users\Dell\Documents\Docker\Docker&Kubernetes\utility-containers:/app" mynpm init
