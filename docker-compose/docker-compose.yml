@@ -5,6 +5,7 @@ services:
         image: 'mongo'
         volumes: 
             - data:/data/db
+        container_name: mongodb
         # environment: 
         #     MONGO_INITDB_ROOT_USERNAME: user
         #     MONGO_INITDB_ROOT_PASSWORD: secret
