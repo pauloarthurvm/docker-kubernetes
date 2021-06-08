@@ -1,0 +1,13 @@
+Start a node project from zero without having node installed locally
+
+docker run -it -d node
+docker exec -it CONTAINER_NAME npm init
+
+docker run -it node npm init
+
+
+=============================
+
+docker build -t node-util .
+
+docker run -it -v "C:\Users\Dell\Documents\Docker\Docker&Kubernetes\utility-containers:/app" node-util npm init
