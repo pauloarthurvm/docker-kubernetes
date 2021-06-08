@@ -1,0 +1,5 @@
+Run in detach mode
+docker-compose up -d
+
+Remove all containers and volumes
+docker-compose down -v
