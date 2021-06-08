@@ -11,3 +11,9 @@ docker run -it node npm init
 docker build -t mynpm .
 
 docker run -it -v "C:\Users\Dell\Documents\Docker\Docker&Kubernetes\utility-containers:/app" mynpm init
+
+=============================
+
+DOCKER COMPOSE
+
+docker-compose run --rm npm init
