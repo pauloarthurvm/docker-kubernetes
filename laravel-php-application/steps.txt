@@ -1,0 +1,4 @@
+Build only one service (composer)
+docker-compose run --rm composer create-project --prefer-dist laravel/laravel .
+
+docker-compose up
