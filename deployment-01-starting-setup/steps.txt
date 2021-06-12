@@ -1,3 +1,25 @@
-docker build -t node-dep-example .
+docker build -t node-dep-example-1 .
 
-docker run -d --rm --name node-dep -p 80:80 node-dep-example
+docker run -d --rm --name node-dep -p 80:80 node-dep-example-1
+
+docker tag node-dep-example-1 paulovarassin/node-example-1
+
+docker push paulovarassin/node-example-1
+
+
+For putty (windows)
+Use putty gen to generate ppk file from original pem key file
+
+Host: ec2-54-233-167-64.sa-east-1.compute.amazonaws.com
+Port: 22
+
+Connection -> SSH -> Auth
+Use create ppk file from steps above
+
+sudo service docker start
+
+sudo docker run -d --rm -p 80:80 paulovarassin/node-example-1
+
+By default, EC2 instance is disconnect from internet.
+Verify Security Groups in instance configs (AWS) -> Inbound rules -> Allow HTTP to everybody
+Open IPV4 public address
