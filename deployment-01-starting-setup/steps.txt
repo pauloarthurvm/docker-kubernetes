@@ -18,6 +18,9 @@ Use create ppk file from steps above
 
 sudo service docker start
 
+If there is new updates to docker images
+sudo docker pull paulovarassin/node-example-1
+
 sudo docker run -d --rm -p 80:80 paulovarassin/node-example-1
 
 By default, EC2 instance is disconnect from internet.
