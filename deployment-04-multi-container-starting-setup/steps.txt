@@ -1,0 +1,5 @@
+docker build -t goals-node ./backend
+
+docker tag goals-node paulovarassin/goals-node
+
+docker push paulovarassin/goals-node
