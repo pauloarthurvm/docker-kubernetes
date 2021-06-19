@@ -63,5 +63,6 @@ minikube service backend
 
 kubectl delete -f="deployment.yaml" -f service.yaml
 
-
 kubectl apply -f="master-deployment.yaml"
+
+kubectl delete deployments,services -l group=example
