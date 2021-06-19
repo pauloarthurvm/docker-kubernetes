@@ -54,5 +54,8 @@ kubectl rollout undo deployment/first-app --to-revision=1
 
 
 -------------
-DEPLOYMENT FILE
+DEPLOYMENT/SERVICE FILE
 kubectl apply -f="deployment.yaml"
+kubectl apply -f service.yaml
+
+minikube service backend
