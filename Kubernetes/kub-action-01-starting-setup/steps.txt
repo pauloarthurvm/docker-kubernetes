@@ -1,0 +1,17 @@
+docker build -t kub-first-app .
+
+docker tag kub-first-app paulovarassin/kub-first-app
+
+docker push paulovarassin/kub-first-app
+
+minikube start --driver=docker
+
+kubectl create deployment first-app --image=paulovarassin/kub-first-app
+
+It takes sometime to be ready
+
+kubectl get deployments
+
+kubectl get pods
+
+kubectl delete deployment first-app
