@@ -29,3 +29,17 @@ minikube service first-app
 SCALING 
 
 kubectl scale deployment/first-app --replicas=3
+
+---------------
+UPDATE DEPLOYMENT
+
+kubectl get deployments
+
+--Need to put a new tag to kubernetes aknowledge
+docker build -t paulovarassin/kub-first-app:2 .
+
+docker push paulovarassin/kub-first-app:2
+
+kubectl set image deployment/first-app kub-first-app=paulovarassin/kub-first-app:2
+
+kubectl rollout status deployment/first-app
