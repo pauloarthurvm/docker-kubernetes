@@ -58,4 +58,10 @@ DEPLOYMENT/SERVICE FILE
 kubectl apply -f="deployment.yaml"
 kubectl apply -f service.yaml
 
+-- Get service connection
 minikube service backend
+
+kubectl delete -f="deployment.yaml" -f service.yaml
+
+
+kubectl apply -f="master-deployment.yaml"
