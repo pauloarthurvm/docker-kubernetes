@@ -43,3 +43,11 @@ docker push paulovarassin/kub-first-app:2
 kubectl set image deployment/first-app kub-first-app=paulovarassin/kub-first-app:2
 
 kubectl rollout status deployment/first-app
+
+--Rollback a deployment (case you deployed with wrong image/tag)
+kubectl rollout undo deployment/first-app
+
+--Go back to a even older deploy
+kubectl rollout history deployment/first-app
+kubectl rollout history deployment/first-app --revision=1
+kubectl rollout undo deployment/first-app --to-revision=1
