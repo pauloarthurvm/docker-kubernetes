@@ -1,3 +1,20 @@
+WORKING LOCALLY
 docker-compose up -d --build
 
 docker-compose down
+
+----------------------------
+
+minikube start --driver=docker
+
+minikube status
+
+docker build -t paulovarassin/kub-data-demo .
+
+docker push paulovarassin/kub-data-demo
+
+kubectl apply -f="service.yaml" -f="deployment.yaml"
+
+kubectl get deployments
+
+minikube service story-service
