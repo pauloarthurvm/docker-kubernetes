@@ -1,2 +1,18 @@
 docker-compose up -d --build
 docker-compose down
+
+
+--------------------------
+
+paulovarassin/kub-demo-users
+
+docker build -t paulovarassin/kub-demo-users .
+
+docker push paulovarassin/kub-demo-users
+
+kubectl apply -f="users-deployment.yaml"
+kubectl apply -f="users-service.yaml"
+
+kubectl get pods
+
+minikube service users-service
