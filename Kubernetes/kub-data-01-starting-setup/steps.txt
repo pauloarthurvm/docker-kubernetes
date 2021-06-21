@@ -17,6 +17,8 @@ kubectl apply -f="host-pv.yaml"
 
 kubectl apply -f="host-pvc.yaml"
 
+kubectl apply -f="environment.yaml"
+
 kubectl apply -f="service.yaml" -f="deployment.yaml"
 
 kubectl get deployments
