@@ -6,9 +6,11 @@ docker-compose down
 
 paulovarassin/kub-demo-users
 
-docker build -t paulovarassin/kub-demo-users .
+docker build -t paulovarassin/kub-demo-users:latest .
+docker build -t paulovarassin/kub-demo-auth:latest .
 
 docker push paulovarassin/kub-demo-users
+docker push paulovarassin/kub-demo-auth
 
 kubectl apply -f="users-deployment.yaml"
 kubectl apply -f="users-service.yaml"
