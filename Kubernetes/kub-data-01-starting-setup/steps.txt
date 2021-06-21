@@ -13,6 +13,10 @@ docker build -t paulovarassin/kub-data-demo .
 
 docker push paulovarassin/kub-data-demo
 
+kubectl apply -f="host-pv.yaml"
+
+kubectl apply -f="host-pvc.yaml"
+
 kubectl apply -f="service.yaml" -f="deployment.yaml"
 
 kubectl get deployments
