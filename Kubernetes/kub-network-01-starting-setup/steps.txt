@@ -24,6 +24,8 @@ kubectl apply -f="auth-deployment.yaml"
 kubectl apply -f="auth-service.yaml"
 kubectl apply -f="tasks-deployment.yaml"
 kubectl apply -f="tasks-service.yaml"
+kubectl apply -f="frontend-deployment.yaml"
+kubectl apply -f="frontend-service.yaml"
 
 kubectl get pods
 
