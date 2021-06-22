@@ -8,14 +8,18 @@ minikube start --driver=docker
 
 docker build -t paulovarassin/kub-demo-users:latest .
 docker build -t paulovarassin/kub-demo-auth:latest .
+docker build -t paulovarassin/kub-demo-tasks:latest .
 
 docker push paulovarassin/kub-demo-users
 docker push paulovarassin/kub-demo-auth
+docker push paulovarassin/kub-demo-tasks
 
 kubectl apply -f="users-deployment.yaml"
 kubectl apply -f="users-service.yaml"
 kubectl apply -f="auth-deployment.yaml"
 kubectl apply -f="auth-service.yaml"
+kubectl apply -f="tasks-deployment.yaml"
+kubectl apply -f="tasks-service.yaml"
 
 kubectl get pods
 
