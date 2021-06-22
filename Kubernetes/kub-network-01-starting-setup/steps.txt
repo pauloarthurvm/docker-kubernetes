@@ -4,7 +4,7 @@ docker-compose down
 
 --------------------------
 
-paulovarassin/kub-demo-users
+minikube start --driver=docker
 
 docker build -t paulovarassin/kub-demo-users:latest .
 docker build -t paulovarassin/kub-demo-auth:latest .
@@ -14,6 +14,8 @@ docker push paulovarassin/kub-demo-auth
 
 kubectl apply -f="users-deployment.yaml"
 kubectl apply -f="users-service.yaml"
+kubectl apply -f="auth-deployment.yaml"
+kubectl apply -f="auth-service.yaml"
 
 kubectl get pods
 
